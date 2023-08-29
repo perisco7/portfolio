@@ -1,0 +1,241 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>My-Portfolio</title>
+  <link rel="stylesheet" href="style.css">
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.2/css/all.min.css"/>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+</head>
+<body>
+  <header>
+    <nav>
+      <ul>
+        <div class="toggle">
+          <a href="#"><i class="fa fa-bars" style="font-size: 20px;"></i></a>
+        </div>
+        <li><a href="#about">About</a></li>
+        <li><a href="project.html">Projects</a></li>
+        <li><a href="#contact">Contact</a></li>
+      </ul>
+    </nav>
+    <a class="navbar-brand">
+      <select class="custom-select" style="width:100px;height:30px; margin-left: 30px; font-size: 12px;" id="language" onchange="changeLanguageByButtonClick()">
+      <option value="af">Afrikanns</option>
+      <option value="sq">Albanian</option>
+      <option value="ar">Arabic</option>
+      <option value="hy">Armenian</option>
+      <option value="eu">Basque</option>
+      <option value="bn">Bengali</option>
+      <option value="bg">Bulgarian</option>
+      <option value="ca">Catalan</option>
+      <option value="km">Cambodian</option>
+      <option value="zh-CN">Chinese (Mandarin)</option>
+      <option value="hr">Croation</option>
+      <option value="cs">Czech</option>
+      <option value="da">Danish</option>
+      <option value="nl">Dutch</option>
+      <option value="en" selected>English</option>
+      <option value="et">Estonian</option>
+      <option value="fj">Fiji</option>
+      <option value="fi">Finnish</option>
+      <option value="fr">French</option>
+      <option value="ka">Georgian</option>
+      <option value="de">German</option>
+      <option value="el">Greek</option>
+      <option value="gu">Gujarati</option>
+      <option value="he">Hebrew</option>
+      <option value="hi">Hindi</option>
+      <option value="hu">Hungarian</option>
+      <option value="is">Icelandic</option>
+      <option value="id">Indonesian</option>
+      <option value="ga">Irish</option>
+      <option value="it">Italian</option>
+      <option value="ja">Japanese</option>
+      <option value="jw">Javanese</option>
+      <option value="ko">Korean</option>
+      <option value="la">Latin</option>
+      <option value="lv">Latvian</option>
+      <option value="lt">Lithuanian</option>
+      <option value="mk">Macedonian</option>
+      <option value="ms">Malay</option>
+      <option value="ml">Malayalam</option>
+      <option value="mt">Maltese</option>
+      <option value="mi">Maori</option>
+      <option value="mr">Marathi</option>
+      <option value="mn">Mongolian</option>
+      <option value="ne">Nepali</option>
+      <option value="no">Norwegian</option>
+      <option value="fa">Persian</option>
+      <option value="pl">Polish</option>
+      <option value="pt">Portuguese</option>
+      <option value="pa">Punjabi</option>
+      <option value="qu">Quechua</option>
+      <option value="ro">Romanian</option>
+      <option value="ru">Russian</option>
+      <option value="sm">Samoan</option>
+      <option value="sr">Serbian</option>
+      <option value="sk">Slovak</option>
+      <option value="sl">Slovenian</option>
+      <option value="es">Spanish</option>
+      <option value="sw">Swahili</option>
+      <option value="sv">Swedish </option>
+      <option value="ta">Tamil</option>
+      <option value="tt">Tatar</option>
+      <option value="te">Telugu</option>
+      <option value="th">Thai</option>
+      <option value="bo">Tibetan</option>
+      <option value="to">Tonga</option>
+      <option value="tr">Turkish</option>
+      <option value="uk">Ukranian</option>
+      <option value="ur">Urdu</option>
+      <option value="uz">Uzbek</option>
+      <option value="vi">Vietnamese</option>
+      <option value="cy">Welsh</option>
+      <option value="xh">Xhosa</option>
+      </select>
+      <div id="google_translate_element" style="display:none"></div>
+      <script type="text/javascript">
+      
+                function googleTranslateElementInit() {
+                  new google.translate.TranslateElement({pageLanguage: "en"}, 'google_translate_element');
+                }
+      
+                function changeLanguageByButtonClick() {
+                  let language = document.getElementById("language").value;
+                  let selectField = document.querySelector("#google_translate_element select");
+                  for(let i=0; i < selectField.children.length; i++){
+                    let option = selectField.children[i];
+                    // find desired langauge and change the former language of the hidden selection-field 
+                    if(option.value==language){
+                       selectField.selectedIndex = i;
+                       // trigger change event afterwards to make google-lib translate this side
+                       selectField.dispatchEvent(new Event('change'));
+                       break;
+                    }
+                  }
+                }
+                </script>
+      <script type="text/javascript" src="https://translate.google.com/translate_a/element.js?cb=googleTranslateElementInit"></script>
+      </a>
+      </div>
+  </header>
+
+  <main>
+    <section id="about">
+      <h3> Hi, I'm Simon-peter 👋</h3>
+      <p>I'm a full stack developer (javascript & Node.js) with a focus on creating (and occasionally designing)</p>
+      <p>exceptional digital experiences that are fast, accessible, visually appealing, and responsive. <br>
+        <button id="button">Download Cv</button>
+      <p id="image"> <img src="/images/pass2.png" alt=""></p>
+    </section>
+    <div class="col-sm-6">
+      <div class="left-content">
+      <img src="/images/photo.png" class="img-responsive" alt data-pagespeed-url-hash="3640630981">
+      </div>
+      </div>
+    <section class="about">
+      <h1>About me</h1>
+      <h2>Curious about me? Here you have it:</h2>
+      <p>I'm a passionate, self-proclaimed designer who specializes in full stack development (JavaScript & Node.js). I am enthusiastic about bringing the technical and visual aspects of digital products to life. User experience, pixel perfect design, and writing clear, readable, highly performant code matters to me.<br><br>
+        I began my journey as a web developer in early 2023, and since then, I've continued to grow and evolve as a developer, taking on new challenges and learning the latest technologies along the way. Now, in my late twenties, 5 months after starting my web development journey, I'm building cutting-edge web applications.<br><br>
+        I am very much a progressive thinker and enjoy working on products end to end, from ideation all the way to development.
+        When I'm not in full-on developer mode, you can find me hovering around on twitter or on facebook, witnessing the journey of early startups or enjoying some free time. You can follow me on Twitter where I share tech-related bites and build in public, or you can follow me on GitHub.</p>
+    </section>
+
+    <section class="skill">
+      <h1 id="skill">Skills</h1>
+      <p id="skills">
+        The skills, tools and technologies I am really good at:
+      </p>
+      <img src="/images/html.png" alt="" width="10%">
+      <img src="/images/css.svg" alt="" width="7%">
+      <img src="/images/javascript.jpg" alt="" width="18%">
+      <img src="/images/node.png" alt="" width="8%">
+      &nbsp;&nbsp;<img src="/images/mongo.png" alt="" width="8%">
+      &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<img src="/images/github.png" alt="" width="8%">
+    </section>
+  </main>
+  <hr>
+  <div class="article">
+    <div class="article-item">
+      <h2>Crafting Digital Experiences: A Journey as a Web Developer</h2>
+      <p>In a digital age where websites and applications have become an integral
+         part of our lives, I find myself on a captivating journey as a web developer. The world of web development is a canvas that allows me to blend creativity and innovation to craft captivating digital experiences. Through this article, I invite you to explore my portfolio as a web developer, where passion meets proficiency and every line of code weaves stories of user engagement and seamless functionality.
+      </p>
+    </div>
+    <div class="article-item">
+      <h2>Embarking on the Web Development Odyssey</h2>
+      <p>My journey as a web developer commenced with curiosity and a determination
+         to create something meaningful in the vast realm of the internet.
+          Armed with HTML, CSS, and JavaScript, I took my first steps into the realm of web design. The joy of bringing a static webpage to life with interactive elements ignited a spark within me. I soon found myself delving deeper into frameworks, libraries, and cutting-edge technologies, eager to unravel the limitless potential of the web.</p>
+    </div>
+    <div class="article-item">
+      <h2>Innovative Technologies that Shape Tomorrow</h2>
+      <p>The dynamic world of web development never ceases to amaze me. From the birth of responsive web design to the rise of Progressive Web Apps (PWAs) and Single Page Applications (SPAs), I stay on the cutting edge of technology to offer clients and users the very best. My proficiency in front-end frameworks like React,
+         allows me to build interactive and efficient applications that redefine digital interactions.</p>
+    </div>
+    <div class="article-item">
+      <h2>Behind the Scenes: Back-End Brilliance</h2>
+      <p>As a full-stack web developer, I thrive on building the backbone that powers web applications. My expertise in back-end technologies like Node.js and express.js,
+         empowers me to create robust and scalable server-side solutions. From crafting RESTful APIs to ensuring data security, I embrace the intricacies of back-end development with enthusiasm.</p>
+
+    </div>
+    <div class="article-item">
+      <h2>Conclusion</h2>
+      <p>As I reflect on my journey as a web developer, I'm humbled by the artistry and technical prowess that this field demands. The evolution of web development is an eternal adventure, and I'm thrilled to be a part of this dynamic landscape. My portfolio is a testament to my commitment to excellence, innovation, and crafting digital experiences that leave a lasting impact.
+        As I eagerly look forward to the next chapter of my web development odyssey, I extend my gratitude to every client and user who has entrusted me with their projects. Your support and enthusiasm fuel my passion and inspire me to create digital wonders that shape the future of the web.
+        Thank you for taking this journey with me.</p>
+    </div>
+  </div>
+  <h3 id="contact">Contacts</h3>
+  <div class="container">
+    <div class="content">
+      <div class="left-side">
+        <div class="address details">
+          <i class="fas fa-map-marker-alt"></i>
+          <div class="topic">Address</div>
+          <div class="text-one">Federal University Lokoja</div>
+          <div class="text-two">Kogi State</div>
+        </div>
+        <div class="phone details">
+          <i class="fas fa-phone-alt"></i>
+          <div class="topic">Phone</div>
+          <div class="text-one">+234 81072 04697</div>
+          <div class="text-two">+000 0000 5678</div>
+        </div>
+        <div class="email details">
+          <i class="fas fa-envelope"></i>
+          <div class="topic">Email</div>
+          <div class="text-one">officialsimonpmail@gmail.com</div>
+          <div class="text-two">t2perisco@gmail.com</div>
+        </div>
+      </div>
+      <div class="right-side">
+        <div class="topic-text">Send us a message</div>
+        <p>What’s next? Feel free to reach out to me if you are looking for a developer, have a query, or simply want to connect.</p>
+      <form action="#">
+        <div class="input-box">
+          <input type="text" placeholder="Enter your name" required>
+        </div>
+        <div class="input-box">
+          <input type="email" placeholder="Enter your email" required>
+        </div>
+        <div class="input-box message-box">
+            <input type="text" placeholder="Enter your message" required>
+  
+          <button id="button">Submit</button>
+        </div>
+      </form>
+    </div>
+    </div>
+  </div>
+
+  <footer>
+    <p>&copy; 2023 Simon-peter - Web Developer Portfolio</p>
+  </footer>
+
+  <script src="script.js"></script>
+</body>
+</html>
